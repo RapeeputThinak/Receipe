@@ -22,6 +22,7 @@ class RecipeDetailState extends State<RecipeDetail> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(widget.recipe.imageUrl),
+          
           const SizedBox(height: 16.0),
  
           Text(
@@ -52,7 +53,7 @@ class RecipeDetailState extends State<RecipeDetail> {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
                   child: Text(
-                    '${ingredient.quantity * sliderValue} ${ingredient.unit} ${ingredient.name}',
+                    '${ingredient.name} ${ingredient.quantity * sliderValue} ${ingredient.unit}',
                     style: const TextStyle(fontSize: 16.0),
                   ),
                 );
